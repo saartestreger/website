@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>saartestreger</title>
+  <!-- Webfont fallback for Old English Text MT -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ensure header uses Old English if available, else Unifraktur */
+    header h1 { font-family: "Old English Text MT", "UnifrakturMaguntia", "Times New Roman", serif; font-weight: 400; letter-spacing: 0.5px; }
+  </style>
 </head>
 <body>
   <header>
@@ -41,13 +47,12 @@
     </p>
   </footer>
   <script>
-  // Disable right-click only inside the gallery
-  document.addEventListener('contextmenu', function (e) {
-    // Target images inside the gallery grid
-    if (e.target.tagName === 'IMG' && e.target.closest('.gallery-grid')) {
-      e.preventDefault();
-    }
-  });
-</script>
+    // Disable right-click only inside the gallery
+    document.addEventListener('contextmenu', function (e) {
+      if (e.target.tagName === 'IMG' && e.target.closest('.gallery-grid')) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
