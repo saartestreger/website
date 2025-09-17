@@ -16,6 +16,13 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Gælder overskrift(er) i headeren */
+header h1, header h2, header .site-title {
+  font-family: "Old English Text MT", "Times New Roman", serif;
+  font-weight: 400; /* Old English er ikke “bold” på alle systemer */
+}
+
+
 /* Layout containere */
 header, main, footer {
   max-width: 800px;
