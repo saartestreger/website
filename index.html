@@ -40,5 +40,14 @@
       <a href="https://www.instagram.com/saartestreger/">Instagram</a>
     </p>
   </footer>
+  <script>
+  // Disable right-click only inside the gallery
+  document.addEventListener('contextmenu', function (e) {
+    // Target images inside the gallery grid
+    if (e.target.tagName === 'IMG' && e.target.closest('.gallery-grid')) {
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
